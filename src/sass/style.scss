@@ -1,0 +1,23 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'base/fonts';
+@import 'base/font-icons';
+@import 'base/mixins';
+@import 'base/variables';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: $main-color;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
