@@ -16,8 +16,22 @@
 }
 
 .container {
-    max-width: 1180px;
+    max-width: 414px;
     margin: 0 auto;
-    padding: 0 15px;
 }
+
+.section-title {
+    margin-bottom: 0;
+    font-size: 34px;
+    line-height: 41px;
+    font-weight: 700;
+    letter-spacing: 0.26px;
+    color: $light-color;
+    text-align: center;
+}
+
+@import 'blocks/promo';
+@import 'blocks/reviews';
+@import 'blocks/plans';
+
 

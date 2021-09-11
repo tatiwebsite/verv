@@ -1,0 +1,38 @@
+.reviews{
+    margin-top: -76px;
+    position: relative;
+    z-index: 5;
+    &__item {
+        padding: 17px 20px 24px 20px;
+        width: 90%;
+        background-color: $bg-light;
+        border-radius: 9px;
+    }
+    &__header {
+        margin-bottom: 9px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        margin-bottom: 0;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    &__author {
+        font-size: 15px;
+        font-weight: 400;
+        opacity: 49.6%;
+    }
+    &__grade {
+        margin-bottom: 14px;
+    }
+    &__point {
+        margin-right: 2px;
+        color: #FCBF59;
+    }
+    &__text {
+        font-size: 15px;
+        line-height: 17.58px;
+    }
+}
