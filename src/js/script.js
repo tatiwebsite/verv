@@ -49,32 +49,30 @@ window.addEventListener('DOMContentLoaded', () => {
         let slideIndex = 1;
         let offset = 0;
         let display = document.documentElement.clientWidth;
+        console.log(display);
         let slideMargin = 0;
 
         slides.forEach(slide => {
-            slide.style.width = display / 100 * 90;
+            slide.style.width = +display / 100 * 90 + 'px';
         });
 
-        slidesField.style.width = 100 * slides.length + '%';
-        slidesField.style.transform = 'translateX(-22%)';
+        slidesField.style.width = 90 * slides.length + '%';
 
-        slides.forEach(slide => {
-            slide.style.width = display / 100 * 90;
-        });
-
-        slidesField.style.width = 100 * slides.length + '%';
-        slidesField.style.transform = 'translateX(-22%)';
 
         slidesWrapper.addEventListener('click', () => {
-    
             if(offset == +slideWidth.slice(0, slideWidth.length - 2) * (slides.length - 1)){
+                console.log(slideWidth);
                 offset = 0;
             } else {
+                console.log(slideWidth);
                 offset += +slideWidth.slice(0, slideWidth.length - 2);
             }
     
             slidesField.style.transform = `translateX(-${offset}px)`;
         });
+
+        let count = 1;
+        
     }
     
     //PlansDesign

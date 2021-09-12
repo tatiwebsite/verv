@@ -10,20 +10,26 @@
         display: flex;
         justify-content: space-between;
         transition: .5s linear;
+        transform: translateX(-19%);
     }
     &__slide {
-        // margin: 0 3px;
+        margin: 0 3px;
         padding: 17px 20px 24px 20px;
-        width: 374px;
         background-color: $bg-light;
         border-radius: 9px;
         @include darkLightThemeCards;
+        @media(max-width:321px){
+            padding: 15px;
+        }
     }
     &__header {
         margin-bottom: 9px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media(max-width:321px){
+           margin-bottom: 0px;
+        }
     }
     &__title {
         margin-bottom: 0;
@@ -39,12 +45,18 @@
     }
     &__grade {
         margin-bottom: 14px;
+        @media(max-width:321px){
+            margin-bottom: 7px;
+        }
     }
     &__point {
         margin-right: 2px;
         color: #FCBF59;
+        width: 21px;
+        height: 21px;
     }
     &__text {
+        margin-bottom: 0;
         font-size: 15px;
         line-height: 17.58px;
         @include darkLightThemeText;

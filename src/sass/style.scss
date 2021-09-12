@@ -28,6 +28,9 @@
     letter-spacing: 0.26px;
     color: $light-color;
     text-align: center;
+    @media(max-width:321px){
+        font-size: 24px;
+    }
 }
 
 @import 'blocks/promo';
