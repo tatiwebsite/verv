@@ -30,6 +30,7 @@
     position: relative;
     border-radius: 9px;
     &__header {
+        margin-bottom: -1px;
         padding: 3px 0;
         font-size: 13px;
         font-weight: 700;
@@ -38,9 +39,9 @@
         background-color: #FCBF59;
         text-transform: uppercase;
         letter-spacing: 0.78px;
-        &_bright {
-            background-color: #FCA759;
-        }
+    }
+    &__header.bright {
+        background-color: #FCA759;
     }
     &__title {
         margin-bottom: 12px;
@@ -60,12 +61,6 @@
         padding: 6px 11px 30px 11px;
         background: $bg-light;
         border-radius: 0 0 9px 9px;
-        &_active {
-            @include gradientBg;
-        }
-        &_radius {
-            border-radius: 9px;
-        }
         @media (prefers-color-scheme: dark) {
             background-color: #373640;
             color: white; 
@@ -73,6 +68,12 @@
         @media (prefers-color-scheme: light) {
             background: $bg-light;
         }
+    }
+    &__info.radius {
+        border-radius: 9px;
+    }
+    &__info.active {
+        @include gradientBg;
     }
     &__total {
         margin-bottom: 9px;
@@ -105,6 +106,7 @@
 }
 
 .button {
+    display: block;
     width: 100%;
     padding: 9px 0;
     font-size: 22px;
@@ -112,11 +114,17 @@
     letter-spacing: 0.04px;
     color: $light-color;
     text-align: center;
+    text-decoration: none;
     background: linear-gradient(225deg, #542285 0%, #222266 100%);
     border: none;
     outline: none;
     border-radius: 5px;
+    &:focus{
+        color: $light-color;
+        text-decoration: none;
+    }
 }
+
 
 .scroll {
     margin: 0 auto;

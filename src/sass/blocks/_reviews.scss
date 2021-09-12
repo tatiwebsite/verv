@@ -8,9 +8,11 @@
     }
     &__slider-inner {
         display: flex;
+        justify-content: space-between;
         transition: .5s linear;
     }
     &__slide {
+        // margin: 0 3px;
         padding: 17px 20px 24px 20px;
         width: 374px;
         background-color: $bg-light;
