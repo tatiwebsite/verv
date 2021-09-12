@@ -4,6 +4,7 @@
     position: relative;
     z-index: 4;
     background-color: #fff;
+    @include darkLightThemeBg;
     &__inner {
         margin-bottom: 27px;
         display: flex;
@@ -21,6 +22,7 @@
         font-size: 11px;
         opacity: 39.59%;
         text-align: center;
+        @include darkLightThemeText;
     }
 }
 
@@ -46,11 +48,12 @@
         font-size: 15px;
         line-height: 17.58px;
         font-weight: 700;
+        @include darkLightThemeText;
         span {
             font-weight: 700;
-
             font-size: 24px;
             line-height: 28px;
+            @include darkLightThemeText;
         }
     }
     &__info {
@@ -63,18 +66,27 @@
         &_radius {
             border-radius: 9px;
         }
+        @media (prefers-color-scheme: dark) {
+            background-color: #373640;
+            color: white; 
+        }
+        @media (prefers-color-scheme: light) {
+            background: $bg-light;
+        }
     }
     &__total {
         margin-bottom: 9px;
         text-align: center;
         font-size: 13px;
         line-height: 15.51px;
+        @include darkLightThemeText;
     }
     &__price {
         margin-bottom: 6px;
         text-align: center;
         font-size: 13px;
         line-height: 15.51px;
+        @include darkLightThemeText;
     }
     &__footer {
         padding: 2px 0;
