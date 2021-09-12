@@ -10,11 +10,9 @@ window.addEventListener('DOMContentLoaded', () => {
           plansButton = document.querySelector('.plans__btn');
 
     designPlan();
-    createSlider();
 
-
+    let timerId = setInterval(() => moveRightSlider(), 5000);
     
-
     //PlansChecking
     plansInner.addEventListener('click', (e) => {
         if(e.target){
@@ -38,42 +36,35 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    //AdaptiveLines
-    // let display = document.documentElement.clientWidth;
-    // document.querySelectorAll('.accent-offer__line>svg').forEach((line) => {
-    //     line.style.width = display;
-    // });
-
-    //Slider
-    function createSlider(){
-        let slideIndex = 1;
-        let offset = 0;
-        let display = document.documentElement.clientWidth;
-        console.log(display);
-        let slideMargin = 0;
-
-        slides.forEach(slide => {
-            slide.style.width = +display / 100 * 90 + 'px';
-        });
-
-        slidesField.style.width = 90 * slides.length + '%';
-
-
-        slidesWrapper.addEventListener('click', () => {
-            if(offset == +slideWidth.slice(0, slideWidth.length - 2) * (slides.length - 1)){
-                console.log(slideWidth);
-                offset = 0;
-            } else {
-                console.log(slideWidth);
-                offset += +slideWidth.slice(0, slideWidth.length - 2);
-            }
+    ///Slider
+    let offset = 0;
+    let slideIndex = 1;
+    slidesField.style.width = 100 * slides.length + '%';
     
-            slidesField.style.transform = `translateX(-${offset}px)`;
+    function moveRightSlider(){
+        slides.forEach(slide => {
+            slide.style.width = slideWidth;
         });
 
-        let count = 1;
-        
+        if (offset == (+slideWidth.slice(0, slideWidth.length - 2) * (slides.length - 1))) {
+            offset = 0;
+        } else {
+            offset += +slideWidth.slice(0, slideWidth.length - 2); 
+        }
+
+        slidesField.style.transform = `translateX(-${offset}px)`;
+
+        if (slideIndex == slides.length) {
+            slideIndex = 1;
+        } else {
+            slideIndex++;
+        }
     }
+
+    slidesWrapper.addEventListener('touchstart', () => {
+        clearInterval(timerId);
+        moveRightSlider();
+    });
     
     //PlansDesign
     function designPlan(){
