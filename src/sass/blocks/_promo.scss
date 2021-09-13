@@ -166,14 +166,18 @@
         }
         @media(max-width:376px){
             height: 245px;
-            width: 95px;
+            width: 109px;
+            left: 168px;
             top: -32px;
         }
+        @media(max-width:341px){
+            left: 151px;
+        }
         @media(max-width:321px){
-            height: 127px;
-            width: 53px;
-            top: -14px;
-            left: 164px;
+            height: 123px;
+            width: 56px;
+            top: -11px;
+            left: 160px;
         }
     }
     &__badge{
@@ -187,8 +191,17 @@
             transform: scale(0);
             animation: badgeAppiarenceFree .4s ease-in-out forwards;
             animation-delay: 1.9s;
+            @media(max-width:396px){
+                top: 27px;
+            }
             @media(max-width:376px){
                 top: 19px;
+            }
+            @media(max-width:355px){
+                top: 15px;
+            }
+            @media(max-width:333px){
+                top: 12px;
             }
             @media(max-width:321px){
                 top: -2px;
@@ -199,8 +212,29 @@
             transform: scale(0);
             animation: badgeAppiarenceFree .4s ease-in-out forwards;
             animation-delay: 1.9s;
+            @media(max-width:412px){
+                top: 126px;
+            }
+            @media(max-width:402px){
+                top: 122px;
+            }
+            @media(max-width:390px){
+                top: 122px;
+            }
+            @media(max-width:385px){
+                top: 119px;
+            }
             @media(max-width:376px){
                 top: 105px;
+            }
+            @media(max-width:355px){
+                top: 100px;
+            }
+            @media(max-width:343px){
+                top: 97px;
+            }
+            @media(max-width:333px){
+                top: 92px;
             }
             @media(max-width:321px){
                 top: 51px;
@@ -240,6 +274,10 @@
     align-items: center;
     &__icon {
         margin-bottom: 5px;
+        &_pro {
+            animation: badgeProPulse 1s ease-in-out forwards;
+            animation-delay: 2.7s;
+        }
     }
     &__point{
         width: 14px;

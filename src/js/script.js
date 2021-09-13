@@ -40,13 +40,13 @@ window.addEventListener('DOMContentLoaded', () => {
     let offset = 0;
     let slideIndex = 1;
     slidesField.style.width = 100 * slides.length + '%';
-    
+
     function moveRightSlider(){
         slides.forEach(slide => {
             slide.style.width = slideWidth;
         });
 
-        if (offset == (+slideWidth.slice(0, slideWidth.length - 2) * (slides.length - 1))) {
+        if (offset >= +slideWidth.slice(0, slideWidth.length - 2) * (slides.length - 1)) {
             offset = 0;
         } else {
             offset += +slideWidth.slice(0, slideWidth.length - 2); 
@@ -76,10 +76,4 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-
-   
-
-    
-
 });
