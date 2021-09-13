@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
             slide.style.width = slideWidth;
         });
 
-        if (offset >= +slideWidth.slice(0, slideWidth.length - 2) * (slides.length - 1)) {
+        if (offset >= +slideWidth.slice(0, slideWidth.length - 2) * (slides.length - 2)) {
             offset = 0;
         } else {
             offset += +slideWidth.slice(0, slideWidth.length - 2); 
