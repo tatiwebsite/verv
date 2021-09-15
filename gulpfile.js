@@ -68,4 +68,23 @@ gulp.task('images', function () {
         .pipe(browserSync.stream());
 });
 
+function vendorJS() {
+    const modules = [
+      'node_modules/swiper/swiper-bundle.min.js',
+      'node_modules/swiper/swiper-bundle.min.js.map',
+    ];
+  
+    return gulp.src(modules)
+      .pipe(gulp.dest('build/js'));
+  }
+  
+  function vendorCSS() {
+    const modules = [
+      'node_modules/swiper/swiper-bundle.min.css',
+    ];
+  
+    return gulp.src(modules)
+      .pipe(gulp.dest('build/css/pages'));
+  }
+
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
