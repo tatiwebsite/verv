@@ -1,11 +1,6 @@
 'use strict';
 
-
-
-  
-
 window.addEventListener('DOMContentLoaded', () => {
-
     new Swiper('.swiper', {
         pagination: {
           el: '.swiper-pagination',
@@ -24,15 +19,11 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1.1,
         centeredSlides: true
       });
-
-
     const plansInner = document.querySelector('.plans__inner'),
           plans = plansInner.querySelectorAll('.plan'),
           plansButton = document.querySelector('.plans__btn');
 
-    designPlan();
-
-    
+    designPlan();   
     //PlansChecking
     plansInner.addEventListener('click', (e) => {
         if(e.target){
@@ -43,7 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
             targetPlan.classList.add('active');
         }
     });
-
     //Go To Continue
     plansButton.addEventListener('click', () => {
         plansButton.setAttribute('href', '');
@@ -66,7 +56,4 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-
-    
 });
